@@ -13,10 +13,10 @@
 
 function getScores(){
     
-    # create a variable with a temporary folder where the 'signal-cli receive' output can be stored for analysis
-    local tempFolder1 = $(mktemp)
+    # create a variable with a temporary file where the 'signal-cli receive' output can be stored for analysis
+    local tempFile = $(mktemp)
 
-    signal-cli receive --ignore-attachments > "$tempFolder1"
+    signal-cli receive --ignore-attachments > "$tempFile"
 }
 
 
